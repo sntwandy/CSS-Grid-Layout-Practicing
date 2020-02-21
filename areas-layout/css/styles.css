@@ -1,0 +1,74 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container
+{
+    display: grid;
+    /*grid-template-columns: 35% 30% 35%;*/
+    /*grid-template-rows: 50% 200px 100px;*/
+    /*grid-template: filas / columns;*/
+    /*Las fracciones en grid es una nueva unidad de medida, que dara una cantidad mas homogenea, se representa con fr*/
+    /*Basicamente con el grid-template lo que hacemos que usando la combinacion de filas y columnas, podremos crear nuestro grid juntos*/
+    /*grid-template: 300px 100px 100px / repeat(4, 1fr); funciones en css grid, nos ayuda a no repetir tanto la configuracion*/
+    /*grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr)); La funcion minmax se utiliza para colocar hasta donde se podra anchar nuestro grid*/
+    grid-template: 100px 1fr 150px / 200px 1fr; /*Podemos utilizar minmax de manera independiente*/
+    grid-template-areas: "header header" 
+                         "leftNav content" 
+                         "footer footer";
+    /*column-gap: 50px;*/
+    /*row-gap: 10px;*/
+    /*gap: filas columnas;*/
+    gap: 10px; /*Se utiliza para generar un margen entre los grids filas / columnas*/
+    height: 100vh;
+}
+
+.item
+{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.item:nth-of-type(4) /*Se utiliza este pseudo para seleccionar un item entre muchos del propio padre.*/
+{
+    /*background-color: blue;*/
+    overflow: auto;
+    /*display: subgrid;*/
+    display: grid; /*Utilizariamos el mismo display del padre puesto que subgrid aun no esta disponible, y no heredaria las opciones de este antes configuradas.*/
+    grid-template: 50px 50px 50px / 150px 150px 150px; /*Tenemos que hacer la herencia de manera manual, hasta que subgrid este disponible*/
+}
+
+.item .item
+{
+background-color: yellow;
+}
+
+.header
+{
+    grid-area: header;
+    background-color: #0064ff;
+    border-radius: 20px;
+}
+
+.leftNav
+{
+    grid-area: leftNav;
+    background-color: #ff8000;
+    border-radius: 20px;
+}
+
+.content
+{
+    grid-area: content;
+    background-color: #edff22;
+    border-radius: 20px;
+}
+
+.footer
+{
+    grid-area: footer;
+    background-color: #2dff22;
+    border-radius: 20px;
+}
