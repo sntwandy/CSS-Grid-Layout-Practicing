@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column size</title>
+
+    <style>
+        .container
+        {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            height: 100vh;
+            gap: 10px;
+        }
+
+        .item
+        {
+            border: 1px solid red;
+        }
+
+        .item:nth-of-type(1)
+        {
+            background-color: blue;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            /*Explicitamente indicamos desde que linea hasta que linea nuestro grid llegara.*/
+        }
+
+        .item:nth-of-type(7)
+        {
+            grid-column: 2 / 4;
+            background-color: cornflowerblue;
+        }
+
+        .item:nth-of-type(8)
+        {
+            /*grid-column: 1 / span 2; Con span le indicamos cuantos espacios debe ocupar nuestro grid*/
+            grid-column: 1 / -1; /*Con menos 1 indicamos que ocupe todas las columnas*/
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Content #1</div>
+        <div class="item">Content #2</div>
+        <div class="item">Content #3</div>
+        <div class="item">Content #4</div>
+        <div class="item">Content #5</div>
+        <div class="item">Content #6</div>
+        <div class="item">Content #7</div>
+        <div class="item">Content #8</div>
+        <div class="item">Content #9</div>
+        <div class="item">Content #10</div>
+        <div class="item">Content #11</div>
+        <div class="item">Content #12</div>
+    </div>
+</body>
+</html>
