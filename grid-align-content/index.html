@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column size</title>
+
+    <style>
+        .container
+        {
+            display: grid;
+            height: 100vh;
+            gap: 5px;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(4, 100px);
+            /*Alineado horizontal, estos son los valores que podra tener para el alineado:
+            justify-items: start end center stretch;*/
+            /*Alineado vertical, estos son los valores que podremos tener para el alineado:
+            align-items: start end center stretch;*/
+            /*justify-items: center;
+            align-items: center;*/
+
+            /* Alineacion de nuestra grilla horizontal, con los siguientes valores:
+            justify-content: start end center stretch space-between space-around space-evenly;*/
+            
+            /* Alineacion de nuestra grilla vertical, con los siguientes valores:
+            align-content: start end center stretch space-around space-between space-evenly;*/
+
+            justify-content: center;
+            align-content: center;
+        }
+
+        .item
+        {
+            border: 1px solid transparent;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        .item:nth-of-type(1)
+        {
+            background-image: linear-gradient(to left,#e3ff00, #0dff00);
+        }
+
+        .item:nth-of-type(2)
+        {
+            background-image: linear-gradient(to left,#00ffde, #0014ff);
+        }
+
+        .item:nth-of-type(3)
+        {
+            background-image: linear-gradient(to left,#ffca00, #ff0000);
+        }
+
+        .item:nth-of-type(4)
+        {
+            background-image: linear-gradient(to left,#bb00ff, #ff0060);
+        }
+
+        .item:nth-of-type(5)
+        {
+            background-image: linear-gradient(to left,#19ff00, #4c00ff);
+            /*Dentro de los items, utilizams el self para alinearlos horizontal y vertical, puesto que es dentro del item y no fuera.*/
+            /*align-self: start;
+            justify-self: start;*/
+        }
+
+        .item:nth-of-type(6)
+        {
+            background-image: linear-gradient(to left, #00ffe8 , #f2ff00);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Content #1</div>
+        <div class="item">Content #2</div>
+        <div class="item">Content #3</div>
+        <div class="item">Content #4</div>
+        <div class="item">Content #5</div>
+        <div class="item">Content #6</div>
+        <div class="item">Content #7</div>
+        <div class="item">Content #8</div>
+        <div class="item">Content #9</div>
+        <div class="item">Content #10</div>
+        <div class="item">Content #11</div>
+        <div class="item">Content #12</div>
+    </div>
+</body>
+</html>
