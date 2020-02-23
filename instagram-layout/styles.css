@@ -2,6 +2,212 @@ body
 {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(250, 250, 250);
+}
+
+/*HEADER*/
+.header
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    border: 1px solid rgba(220,220,220, 0.5);
+    margin: 0px;
+    width: 100vw;
+}
+
+.instagram-logo-container
+{
+    justify-self: end;
+}
+
+.figure-instagram-logo
+{
+    margin: auto;
+}
+
+.instagram-search
+{
+    justify-self: center;
+}
+
+.instagram-login-singup-buttons
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.instagram-login-singup-buttons
+{
+    justify-self: start;
+}
+
+.login-button
+{
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgb(56, 151, 240);
+    color: white;
+    height: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-button
+{
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    height: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-button a
+{
+    text-decoration: none;
+    color: rgb(56, 151, 240);
+    font-weight: bold;
+}
+
+.login-button a 
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/*/HEADER*/
+
+
+/*PROFILE INFO*/
+.profile-container
+{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.photo
+{
+    border-radius: 50%;
+}
+
+.username-followbtn-container
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.username-container
+{
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.followbtn-container
+{
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgb(56, 151, 240);
+    color: white;
+    height: 30px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.followbtn-container a 
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.post-followers-following-container
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.poster-container
+{
+    margin-right: 40px;
+}
+
+.poster-container a 
+{
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.poster-container a span
+{
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
+.followers-container
+{
+    margin-right: 40px;
+}
+
+.followers-container a
+{
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.followers-container a span
+{
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
+.following-container a
+{
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.following-container a span
+{
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
+.name-container span
+{
+    font-weight: bolder;
+}
+
+.description
+{
+    margin-top: 5px;
+    width: 20em;
+}
+/*/PROFILE INFO*/
+.line
+{   width: 900px;
+    margin: auto;
+    border: 0.2px solid rgba(220,220,220, 0.5);
+    margin-bottom: 50px;
+    margin-top: 0px;
 }
 
 .post-container
@@ -63,5 +269,27 @@ body
     .post-container
     {
         gap: 3px;
+    }
+}
+
+@media screen and (max-width: 585px)
+{
+    .profile-container
+    {
+        display: block;
+        margin-left: 1em;
+    }
+
+    .instagram-login-singup-buttons
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 410px)
+{
+    .header
+    {
+        display: block;
     }
 }
