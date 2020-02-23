@@ -1,0 +1,67 @@
+body
+{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    gap: 28px;
+}
+
+.post
+{
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.post-image
+{
+    margin: 0px;
+}
+
+.post-image img
+{
+    width: 100%;
+    vertical-align: top;
+}
+
+.post-overlay
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post:hover .post-overlay
+{
+    display: flex;
+}
+
+.post-likes, .post-comments
+{
+    font-weight: bold;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .post-container
+    {
+        gap: 3px;
+    }
+}
