@@ -1,0 +1,180 @@
+/*HEADER*/
+.header
+{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0px;
+}
+
+.header-container
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.figure-logo
+{
+    margin: 0px;
+}
+
+.logo
+{
+    width: 35px;
+}
+
+.pinterest-letter-container
+{
+    margin-left: 10px;
+}
+
+.pinterest
+{
+    font-size: 1em;
+}
+
+.search-container
+{
+    margin: 0px 20px;
+}
+
+.search
+{
+    width: 1000px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.buttons-container
+{
+    display: inherit;
+}
+
+.signup-button
+{
+    display: inherit;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(230, 0, 35);
+    border-radius: 5px; 
+    text-align: center;
+    margin-right: 10px;
+}
+
+.signup-button:hover
+{
+    background-color: rgb(230, 0, 100);
+}
+
+.signup
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    width: inherit;
+    height: inherit;
+    padding: 10px;
+}
+
+.login-button
+{
+    display: inherit;
+    width: 100px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 5px; 
+    text-align: center;
+}
+
+.login-button:hover
+{
+    background-color: #cccccc;
+}
+
+.login
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    width: inherit;
+    height: inherit;
+    padding: 10px;
+}
+/*/HEADER*/
+
+
+.container-imgs
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.item
+{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.item img
+{
+    max-width: 100%;
+}
+
+.level1
+{
+    grid-row-end: span 3;
+}
+
+.level2
+{
+    grid-row-end: span 1;
+}
+
+.level3
+{
+    grid-row-end: span 2;
+}
+
+@media screen and (max-width: 1370px)
+{
+    .search
+    {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 880px)
+{
+    .search
+    {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 620px)
+{
+    .header-container
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .buttons-container
+    {
+        margin-left: 30%;
+    }
+
+    .signup-button
+    {
+        margin: 10px 0px;
+    }
+
+    .search-container
+    {
+        margin: 0px;
+    }
+}
